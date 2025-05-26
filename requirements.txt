@@ -1,3 +1,4 @@
 ultralytics==8.3.117
 streamlit
-pillow
+opencv-python
+Pillow
