@@ -1,3 +1,4 @@
+%%writefile app.py
 
 from ultralytics import YOLO
 import streamlit as st
