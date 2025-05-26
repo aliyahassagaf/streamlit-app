@@ -1,5 +1,3 @@
-%%writefile app.py
-
 from ultralytics import YOLO
 import streamlit as st
 from PIL import Image
@@ -9,8 +7,8 @@ st.set_page_config(page_title="Deteksi Sel Darah", layout="centered")
 st.title("🩸 Deteksi Sel Darah Otomatis dengan YOLOv11")
 st.write("Upload gambar mikroskopis untuk mendeteksi sel darah secara otomatis.")
 
-# Load model YOLOv11 kamu (ganti path jika berbeda)
-model_path = "runs/detect/train/weights/best.pt"
+# Load model YOLOv11 kamu (ganti path jika beda)
+model = YOLO("runs/detect/train/weights/best.pt")
 
 uploaded_file = st.file_uploader("📤 Upload gambar", type=["jpg", "jpeg", "png"])
 if uploaded_file:
